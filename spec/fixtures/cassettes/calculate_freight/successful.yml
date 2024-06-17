@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/shipping/14302536/cart/3a77f5a9-bb54-4f57-af63-145d517d4d22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Oct 2023 13:50:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '749'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 38697db0-e6b0-4e31-96a8-6df095262418
+      X-Kong-Upstream-Latency:
+      - '5581'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkaXNjbGFpbWVycyI6WyJPcyBwcmF6b3MgZGUgZW50cmVnYSBjb21lw6dhbSBhIGNvbnRhciBhIHBhcnRpciBkYSBjb25maXJtYcOnw6NvIGRlIHBhZ2FtZW50byBlIHBvZGVtIHZhcmlhciBwYXJhIG1haXMgZGUgdW1hIHVuaWRhZGUgZGUgdW0gbWVzbW8gcHJvZHV0by4iXSwiZGVsaXZlcmllcyI6W3siaWQiOiI4ZmRhNmEyNC0wYzc3LTQxNGQtYjBmOC04NDlhZTE4MmI4YzItMSIsInN0YXR1cyI6ImF2YWlsYWJsZSIsInN0YXR1c19tZXNzYWdlIjoiRGlzcG9uw612ZWwgcGFyYSBlbnRyZWdhIiwiaXRlbXMiOlt7InNrdSI6IjIwMDQ4NzMwMCIsInF1YW50aXR5IjoxLCJzZWxsZXIiOiJtYWdhemluZWx1aXphIiwic2VsbGVyX2Rlc2NyaXB0aW9uIjoiTWFnYWx1Iiwic2VsbGVyX3NrdSI6IjIwMDQ4NzMwMCIsImJ1bmRsZV9za3UiOm51bGx9XSwibW9kYWxpdGllcyI6W3siaWQiOiIxIiwibmFtZSI6IkVudHJlZ2EgcGFkcsOjbyIsImFtb3VudCI6IjguMDIiLCJ0eXBlIjoiY29udmVudGlvbmFsIiwic2hpcHBpbmdfdGltZSI6eyJ1bml0Ijoid29ya2luZ19kYXlzIiwibWluX3ZhbHVlIjo3LCJtYXhfdmFsdWUiOjcsImRlc2NyaXB0aW9uIjoiUmVjZWJhIGVtIGF0w6kgNyBkaWFzIMO6dGVpcyIsImRpc2NsYWltZXJzIjpbIkFww7NzIG8gcGFnYW1lbnRvIGNvbmZpcm1hZG8iXX0sInByb3ZpZGVycyI6WyJtYWdhbG9nIl19XSwicHJvdmlkZXIiOiJtYWdhbG9nIn1dLCJ1bmF2YWlsYWJsZV9kZWxpdmVyaWVzIjpbXX0=
+  recorded_at: Tue, 24 Oct 2023 13:50:08 GMT
+recorded_with: VCR 6.2.0

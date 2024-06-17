@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers/a6b461b7-09f4-4186-b700-040dfb72dd74/address
+    body:
+      encoding: UTF-8
+      string: '{"alias":"Casa2","name":"Fulano de Tal","zip_code":"12345678","street":"Rua
+        dos Afogados","district":"Centro","number":"1001","complement":"Apto 1","reference":"Perto
+        do Bar","city":"São Paulo","state":"SP","area_code":"11","phone":"999999999"}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0TGxHNW9iY1JKaWpFTHFsNnFCdmtEbndDdzRkZHFzMG5MVWFmMk1udkUwIn0.eyJqdGkiOiI2Y2I4NTBhZC1lN2I0LTRjNzQtOTI5Mi05ZWM3MDkzZDIyNDYiLCJleHAiOjE2OTY1Mjk0NzcsIm5iZiI6MCwiaWF0IjoxNjk2NTI3Njc3LCJpc3MiOiJodHRwczovL2tleWNsb2FrLXN0YWdpbmcubHVpemFsYWJzLmNvbS9hdXRoL3JlYWxtcy9CMkIiLCJhdWQiOlsiZnVsbGNvbW1lcmNlLWFwaSIsImFjY291bnQiXSwic3ViIjoiY2JlMTRkYmQtMjkyYS00NzIzLWE4MTEtNGUzOWIyMDI5M2IxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicHJvZ3JhbWFzLXBhcmNlaXJvLXRlc3RlLW1hZ2FsdS1wbGF0Zm9ybS1hcGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI4MzBlZTkzZS05YzJiLTRkMGEtYTdmNC1hY2ZhY2QyYjZhMjgiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiY2xpZW50SWQiOiJwcm9ncmFtYXMtcGFyY2Vpcm8tdGVzdGUtbWFnYWx1LXBsYXRmb3JtLWFwaSIsInBhcnRuZXJfaWQiOiIxNjg1MSIsImNsaWVudEhvc3QiOiIxNDguNTkuNzIuMjU0IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtcHJvZ3JhbWFzLXBhcmNlaXJvLXRlc3RlLW1hZ2FsdS1wbGF0Zm9ybS1hcGkiLCJjaGFubmVsX2lkIjoiMyIsImNsaWVudEFkZHJlc3MiOiIxNDguNTkuNzIuMjU0IiwiZW1haWwiOiJzZXJ2aWNlLWFjY291bnQtcHJvZ3JhbWFzLXBhcmNlaXJvLXRlc3RlLW1hZ2FsdS1wbGF0Zm9ybS1hcGlAcGxhY2Vob2xkZXIub3JnIn0.Z-XoQ3TREYbGg6_QAPXjo9WfPblA7otIIR2H42QaMr0E5n5TfH6smb0eMJHpt3Oj69yxxinSXqvrtxdTPNszXVRxHnMhiq5qZ7i9qKaAPr_VwO3RYYcXCI_jz0pmGqiOakqI1vBuViiO8lG7bJ64wd7MxgPzwovn8D9HtbQQ69c-sEYP5uYmOcW9sjp6o8GFx8_OHAhGyybDF-F36jX1LCFxaco3U135XnwZDRFdGY9995OCfi_hv5gQNdlcAEQpOiuqyS7YvkwoxgWYakNUAAbv60nLmB4SMK-Hz2efH4vZZcfF3AXbT6B-x1bXKqj6Q9JlsNcnkLlD8RQlayW5EA
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 17:45:10 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 27b57e31-f280-4e79-ba1c-ee771f8b42e2
+      X-Kong-Upstream-Latency:
+      - '2347'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '{"id":"a24d3e58-e6e1-4173-8bfc-08ab2b839804"}'
+  recorded_at: Thu, 05 Oct 2023 17:45:10 GMT
+recorded_with: VCR 6.2.0

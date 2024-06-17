@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers/a6b461b7-09f4-4186-b700-040dfb72dd74/address
+    body:
+      encoding: UTF-8
+      string: '{"alias":"Casa 3","name":"","zip_code":"","street":"Rua dos Canarios","district":"Centro","number":"0","complement":"Apto
+        1","reference":"Perto da padaria","city":"São Paulo","state":"SP","area_code":"11","phone":"999999999"}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 17:47:47 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - d9c98ff3-c462-4bc0-b0b4-d425ae8abf4b
+      X-Kong-Upstream-Latency:
+      - '22'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '[{"error_code":"UNPROCESSABLE_ENTITY","message":"value is not a valid","details":[{"loc":["body","name"],"msg":"ensure
+        this value has at least 1 characters","type":"value_error.any_str.min_length","ctx":{"limit_value":1}},{"loc":["body","zip_code"],"msg":"ensure
+        this value has at least 8 characters","type":"value_error.any_str.min_length","ctx":{"limit_value":8}}],"links":["https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/422"]}]'
+  recorded_at: Thu, 05 Oct 2023 17:47:46 GMT
+recorded_with: VCR 6.2.0

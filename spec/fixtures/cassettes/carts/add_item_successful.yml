@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/carts/71555ff9-91c3-4264-9095-06a169117cb3/items
+    body:
+      encoding: UTF-8
+      string: '{"sku":"145855500","seller":"magazineluiza","quantity":1}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Oct 2023 11:23:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3002'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 6df2dc33-f5a8-4b4a-a8cd-7fe39159fb17
+      X-Kong-Upstream-Latency:
+      - '4290'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjcxNTU1ZmY5LTkxYzMtNDI2NC05MDk1LTA2YTE2OTExN2NiMyIsIml0ZW1zIjpbeyJza3UiOiIyMDA0ODczMDAiLCJzZWxsZXIiOiJtYWdhemluZWx1aXphIiwic2VsbGVyX2Rlc2NyaXB0aW9uIjoiTWFnYWx1IiwicXVhbnRpdHkiOjEsImxpc3RfcHJpY2UiOiIxMzkuOTAiLCJwcmljZSI6IjEzOS45MCIsImJlc3RfcHJpY2UiOiIxMzkuOTAiLCJkaXNjb3VudHMiOltdLCJ3YXJyYW50eSI6bnVsbCwicHJvZHVjdCI6eyJuYW1lIjoiTWFsZXRhIEZyYW5xdWVpcmEgTcOpZGlhIFRlZW4iLCJjb25maWciOiIiLCJza3UiOiIyMDA0ODczMDAiLCJzdXBwbGllcl9pZCI6IiIsImJyYW5kIjoiYmVsbGl6IiwiaW1hZ2UiOiJodHRwczovL3Bpcy1zdGF0aWMtdHN0Lm1hZ2F6aW5lbHVpemEuY29tLmJyL3t3fXh7aH0vbWFsZXRhLWZyYW5xdWVpcmEtbWVkaWEtdGVlbi1iZWxsaXotMzUyNy9tYWdhemluZWx1aXphLzIwMDQ4NzMwMC85NmQxYjgxM2UzNGY5N2ZlOTc2Yjg1NWQ3YThkYjIwYy5qcGciLCJpbWFnZV91cmwiOiIyMDA0ODczMDAuanBnIiwicmVmZXJlbmNlIjoiQmVsbGl6IDM1MjciLCJhdmFpbGFibGVfc2VydmljZXMiOltdLCJhdmFpbGFibGVfd2FycmFudGllcyI6W10sInNoaXBwaW5nX2F2YWlsYWJpbGl0eSI6ImFsbF9yZWdpb25zIiwidmFyaWF0aW9ucyI6W10sImNhdGVnb3J5X2lkIjoiQ1AiLCJjYXRlZ29yeV9uYW1lIjoiQmVsZXphIGUgU2HDumRlIiwic3ViY2F0ZWdvcnlfaWQiOiJCU01BIiwic3ViY2F0ZWdvcnlfbmFtZSI6Ii0iLCJwcm92aWRlciI6Im1hZ2F6aW5lbHVpemEiLCJwcm92aWRlcl9kZXNjcmlwdGlvbiI6Ik1hZ2FsdSJ9LCJzZXJ2aWNlcyI6W10sImNhdGFsb2dfcHJpY2UiOiIxMzkuOTAiLCJ1cGRhdGVkX2F0IjoiMjAyMy0xMC0xMFQwODoyMzo0My0wMzAwIiwidHlwZSI6InByb2R1Y3QiLCJiZW5lZml0cyI6W10sInN1YnRvdGFsIjoiMTM5LjkwIiwic3VnZ2VzdGlvbnMiOltdLCJtYXhfcXVhbnRpdHkiOm51bGx9LHsic2t1IjoiMTQ1ODU1NTAwIiwic2VsbGVyIjoibWFnYXppbmVsdWl6YSIsInNlbGxlcl9kZXNjcmlwdGlvbiI6Ik1hZ2FsdSIsInF1YW50aXR5IjoxLCJsaXN0X3ByaWNlIjoiMTM0LjkwIiwicHJpY2UiOiIxMDkuOTAiLCJiZXN0X3ByaWNlIjoiMTA5LjkwIiwiZGlzY291bnRzIjpbXSwid2FycmFudHkiOm51bGwsInByb2R1Y3QiOnsibmFtZSI6IkpvZ28gZGUgUG90ZXMgSW5veCAzIFBlw6dhcyIsImNvbmZpZyI6IiIsInNrdSI6IjE0NTg1NTUwMCIsInN1cHBsaWVyX2lkIjoiIiwiYnJhbmQiOiJUcmFtb250aW5hIiwiaW1hZ2UiOiJodHRwczovL3Bpcy1zdGF0aWMtdHN0Lm1hZ2F6aW5lbHVpemEuY29tLmJyL3t3fXh7aH0vam9nby1kZS1wb3Rlcy1pbm94LTMtcGVjYXMtdHJhbW9udGluYS02NDIyMC0yMTAvbWFnYXppbmVsdWl6YS8xNDU4NTU1MDAvODRmNTBiOGIyZjFhN2MwMWNlZDg4Njk5YzMzZWNjMmIuanBnIiwiaW1hZ2VfdXJsIjoiMTQ1ODU1NTAwLmpwZyIsInJlZmVyZW5jZSI6IlRyYW1vbnRpbmEgNjQyMjAvMjEwIiwiYXZhaWxhYmxlX3NlcnZpY2VzIjpbXSwiYXZhaWxhYmxlX3dhcnJhbnRpZXMiOltdLCJzaGlwcGluZ19hdmFpbGFiaWxpdHkiOiJhbGxfcmVnaW9ucyIsInZhcmlhdGlvbnMiOltdLCJjYXRlZ29yeV9pZCI6IlVEIiwiY2F0ZWdvcnlfbmFtZSI6IlV0aWxpZGFkZXMgRG9tw6lzdGljYXMiLCJzdWJjYXRlZ29yeV9pZCI6IlBPVUQiLCJzdWJjYXRlZ29yeV9uYW1lIjoiUG90ZSIsInByb3ZpZGVyIjoibWFnYXppbmVsdWl6YSIsInByb3ZpZGVyX2Rlc2NyaXB0aW9uIjoiTWFnYWx1In0sInNlcnZpY2VzIjpbXSwiY2F0YWxvZ19wcmljZSI6IjEwOS45MCIsInVwZGF0ZWRfYXQiOiIyMDIzLTEwLTEwVDA4OjIzOjQ1LTAzMDAiLCJ0eXBlIjoicHJvZHVjdCIsImJlbmVmaXRzIjpbXSwic3VidG90YWwiOiIxMDkuOTAiLCJzdWdnZXN0aW9ucyI6W10sIm1heF9xdWFudGl0eSI6bnVsbH1dLCJwcm9tb2NvZGUiOm51bGwsInRvdGFsX2Ftb3VudCI6IjI0OS44MCIsInRvdGFsX2Jlc3RfYW1vdW50IjoiMjQ5LjgwIiwiY3VzdG9tZXJfaWQiOiJhNmI0NjFiNy0wOWY0LTQxODYtYjcwMC0wNDBkZmI3MmRkNzQiLCJiaWxsaW5nX2FkZHJlc3NfaWQiOiI2MTYyNzAwMC04MWNiLTRlZTItYjkwYy05N2ViMzUxOTgzMDEiLCJzaGlwcGluZ19hZGRyZXNzX2lkIjoiNjE2MjcwMDAtODFjYi00ZWUyLWI5MGMtOTdlYjM1MTk4MzAxIiwic2hpcHBpbmdfYWRkcmVzcyI6eyJpZCI6IjYxNjI3MDAwLTgxY2ItNGVlMi1iOTBjLTk3ZWIzNTE5ODMwMSIsIm5hbWUiOiJNZXUgRW5kZXJlw6dvIiwic3RyZWV0IjoiUnVhIGRvcyBBZmFnYWZpbmhvcyIsInJlY2lwaWVudF9uYW1lIjoiSm9obiBEb2UiLCJudW1iZXIiOiIwIiwiY29tcGxlbWVudCI6IkFwdG8gMSIsImRpc3RyaWN0IjoiQ2VudHJvIiwiemlwX2NvZGUiOiIxMjM0NTY3OCIsImNpdHkiOiJTw6NvIFBhdWxvIiwic3RhdGUiOiJTUCIsInJlZmVyZW5jZSI6IlBlcnRvIGRhIHBhZGFyaWEifSwidG90YWxzIjp7ImFtb3VudCI6IjI0OS44MCIsImNhdGFsb2dfYW1vdW50IjoiMjQ5LjgwIiwiY2hlY2tvdXRfYW1vdW50IjoiMjQ5LjgwIiwiaXRlbXNfYW1vdW50IjoiMjQ5LjgwIiwiaXRlbXNfY2F0YWxvZ19hbW91bnQiOiIyNDkuODAiLCJpdGVtc19jaGVja291dF9hbW91bnQiOiIyNDkuODAiLCJpdGVtc19xdWFudGl0eSI6IjIiLCJkaXNjb3VudF9hbW91bnQiOiIwLjAwIiwic2hpcHBpbmdfYW1vdW50IjoiMC4wMCIsImRpc2NvdW50cyI6W10sInRheF9hbW91bnQiOm51bGwsInRheF9jaGVja291dF9hbW91bnQiOm51bGx9LCJkaXNjb3VudHMiOltdLCJkZWxpdmVyaWVzIjpbXSwiZGVsaXZlcnlfZGlzY2xhaW1lcnMiOltdLCJzaGlwcGluZ19tZXRob2RfaWQiOm51bGwsInNoaXBwaW5nX3BhY2thZ2VzIjpbXSwiZXh0ZW5zaW9ucyI6eyJidWRkeV9vcmlnaW4iOnsib3JpZ2luIjoiYjJiOnByb2dyYW1hczp0ZXN0ZW1hZ2FsdSJ9fSwiY2FtcGFpZ25fY29kZSI6IjE2ODUxIn0=
+  recorded_at: Tue, 10 Oct 2023 11:23:44 GMT
+recorded_with: VCR 6.2.0

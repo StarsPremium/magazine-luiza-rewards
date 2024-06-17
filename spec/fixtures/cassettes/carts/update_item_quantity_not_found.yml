@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/carts/71555ff9-91c3-4264-9095-06a169117cb3/items/invalid/seller/magazineluiza
+    body:
+      encoding: UTF-8
+      string: '{"quantity":2}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 10 Oct 2023 11:52:26 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - cfbae095-8180-412d-8c0f-c0b698d378b0
+      X-Kong-Upstream-Latency:
+      - '1090'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '[{"error_code":"ITEM_NOT_FOUND","message":"Item Not Found","details":[],"links":[]}]'
+  recorded_at: Tue, 10 Oct 2023 11:52:26 GMT
+recorded_with: VCR 6.2.0

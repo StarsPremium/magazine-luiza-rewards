@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/carts/71555ff9-91c3-4264-9095-06a169117cb3/items/200487300/seller/magazineluiza
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Oct 2023 12:00:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2059'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 93ca2e1f-f29f-4e57-84bb-12db0fc515c1
+      X-Kong-Upstream-Latency:
+      - '300'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjcxNTU1ZmY5LTkxYzMtNDI2NC05MDk1LTA2YTE2OTExN2NiMyIsIml0ZW1zIjpbeyJza3UiOiIxNDU4NTU1MDAiLCJzZWxsZXIiOiJtYWdhemluZWx1aXphIiwic2VsbGVyX2Rlc2NyaXB0aW9uIjoiTWFnYWx1IiwicXVhbnRpdHkiOjEsImxpc3RfcHJpY2UiOiIxMzQuOTAiLCJwcmljZSI6IjEwOS45MCIsImJlc3RfcHJpY2UiOiIxMDkuOTAiLCJkaXNjb3VudHMiOltdLCJ3YXJyYW50eSI6bnVsbCwicHJvZHVjdCI6eyJuYW1lIjoiSm9nbyBkZSBQb3RlcyBJbm94IDMgUGXDp2FzIiwiY29uZmlnIjoiIiwic2t1IjoiMTQ1ODU1NTAwIiwic3VwcGxpZXJfaWQiOiIiLCJicmFuZCI6IlRyYW1vbnRpbmEiLCJpbWFnZSI6Imh0dHBzOi8vcGlzLXN0YXRpYy10c3QubWFnYXppbmVsdWl6YS5jb20uYnIve3d9eHtofS9qb2dvLWRlLXBvdGVzLWlub3gtMy1wZWNhcy10cmFtb250aW5hLTY0MjIwLTIxMC9tYWdhemluZWx1aXphLzE0NTg1NTUwMC84NGY1MGI4YjJmMWE3YzAxY2VkODg2OTljMzNlY2MyYi5qcGciLCJpbWFnZV91cmwiOiIxNDU4NTU1MDAuanBnIiwicmVmZXJlbmNlIjoiVHJhbW9udGluYSA2NDIyMC8yMTAiLCJhdmFpbGFibGVfc2VydmljZXMiOltdLCJhdmFpbGFibGVfd2FycmFudGllcyI6W10sInNoaXBwaW5nX2F2YWlsYWJpbGl0eSI6ImFsbF9yZWdpb25zIiwidmFyaWF0aW9ucyI6W10sImNhdGVnb3J5X2lkIjoiVUQiLCJjYXRlZ29yeV9uYW1lIjoiVXRpbGlkYWRlcyBEb23DqXN0aWNhcyIsInN1YmNhdGVnb3J5X2lkIjoiUE9VRCIsInN1YmNhdGVnb3J5X25hbWUiOiJQb3RlIiwicHJvdmlkZXIiOiJtYWdhemluZWx1aXphIiwicHJvdmlkZXJfZGVzY3JpcHRpb24iOiJNYWdhbHUifSwic2VydmljZXMiOltdLCJjYXRhbG9nX3ByaWNlIjoiMTA5LjkwIiwidXBkYXRlZF9hdCI6IjIwMjMtMTAtMTBUMDg6NTI6MjMtMDMwMCIsInR5cGUiOiJwcm9kdWN0IiwiYmVuZWZpdHMiOltdLCJzdWJ0b3RhbCI6IjEwOS45MCIsInN1Z2dlc3Rpb25zIjpbXSwibWF4X3F1YW50aXR5IjpudWxsfV0sInByb21vY29kZSI6bnVsbCwidG90YWxfYW1vdW50IjoiMTA5LjkwIiwidG90YWxfYmVzdF9hbW91bnQiOiIxMDkuOTAiLCJjdXN0b21lcl9pZCI6ImE2YjQ2MWI3LTA5ZjQtNDE4Ni1iNzAwLTA0MGRmYjcyZGQ3NCIsImJpbGxpbmdfYWRkcmVzc19pZCI6IjYxNjI3MDAwLTgxY2ItNGVlMi1iOTBjLTk3ZWIzNTE5ODMwMSIsInNoaXBwaW5nX2FkZHJlc3NfaWQiOiI2MTYyNzAwMC04MWNiLTRlZTItYjkwYy05N2ViMzUxOTgzMDEiLCJzaGlwcGluZ19hZGRyZXNzIjp7ImlkIjoiNjE2MjcwMDAtODFjYi00ZWUyLWI5MGMtOTdlYjM1MTk4MzAxIiwibmFtZSI6Ik1ldSBFbmRlcmXDp28iLCJzdHJlZXQiOiJSdWEgZG9zIEFmYWdhZmluaG9zIiwicmVjaXBpZW50X25hbWUiOiJKb2huIERvZSIsIm51bWJlciI6IjAiLCJjb21wbGVtZW50IjoiQXB0byAxIiwiZGlzdHJpY3QiOiJDZW50cm8iLCJ6aXBfY29kZSI6IjEyMzQ1Njc4IiwiY2l0eSI6IlPDo28gUGF1bG8iLCJzdGF0ZSI6IlNQIiwicmVmZXJlbmNlIjoiUGVydG8gZGEgcGFkYXJpYSJ9LCJ0b3RhbHMiOnsiYW1vdW50IjoiMTA5LjkwIiwiY2F0YWxvZ19hbW91bnQiOiIxMDkuOTAiLCJjaGVja291dF9hbW91bnQiOiIxMDkuOTAiLCJpdGVtc19hbW91bnQiOiIxMDkuOTAiLCJpdGVtc19jYXRhbG9nX2Ftb3VudCI6IjEwOS45MCIsIml0ZW1zX2NoZWNrb3V0X2Ftb3VudCI6IjEwOS45MCIsIml0ZW1zX3F1YW50aXR5IjoiMSIsImRpc2NvdW50X2Ftb3VudCI6IjAuMDAiLCJzaGlwcGluZ19hbW91bnQiOiIwLjAwIiwiZGlzY291bnRzIjpbXSwidGF4X2Ftb3VudCI6bnVsbCwidGF4X2NoZWNrb3V0X2Ftb3VudCI6bnVsbH0sImRpc2NvdW50cyI6W10sImRlbGl2ZXJpZXMiOltdLCJkZWxpdmVyeV9kaXNjbGFpbWVycyI6W10sInNoaXBwaW5nX21ldGhvZF9pZCI6bnVsbCwic2hpcHBpbmdfcGFja2FnZXMiOltdLCJleHRlbnNpb25zIjp7ImJ1ZGR5X29yaWdpbiI6eyJvcmlnaW4iOiJiMmI6cHJvZ3JhbWFzOnRlc3RlbWFnYWx1In19LCJjYW1wYWlnbl9jb2RlIjoiMTY4NTEifQ==
+  recorded_at: Tue, 10 Oct 2023 12:00:46 GMT
+recorded_with: VCR 6.2.0

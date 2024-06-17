@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/carts/71555ff9-91c3-4264-9095-06a169117cb3
+    body:
+      encoding: UTF-8
+      string: '{"shipping_address_id":"61627000-81cb-4ee2-b90c-97eb35198301","customer_id":"a6b461b7-09f4-4186-b700-040dfb72dd74","deliveries":[{"id":"55956efe-ffba-41bf-a073-df43c4483d54-1","modality":{"id":"1","type":"conventional"}}]}'
+    headers:
+      Accept-Encoding:
+      - gzip, deflate, br
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 09 Oct 2023 12:30:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2031'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 13548fae-4aed-47c5-9288-0013f0ee81f2
+      X-Kong-Upstream-Latency:
+      - '1377'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjcxNTU1ZmY5LTkxYzMtNDI2NC05MDk1LTA2YTE2OTExN2NiMyIsIml0ZW1zIjpbeyJza3UiOiIyMDA0ODczMDAiLCJzZWxsZXIiOiJtYWdhemluZWx1aXphIiwic2VsbGVyX2Rlc2NyaXB0aW9uIjoiTWFnYWx1IiwicXVhbnRpdHkiOjEsImxpc3RfcHJpY2UiOiIxMzkuOTAiLCJwcmljZSI6IjEzOS45MCIsImJlc3RfcHJpY2UiOiIxMzkuOTAiLCJkaXNjb3VudHMiOltdLCJ3YXJyYW50eSI6bnVsbCwicHJvZHVjdCI6eyJuYW1lIjoiTWFsZXRhIEZyYW5xdWVpcmEgTcOpZGlhIFRlZW4iLCJjb25maWciOiIiLCJza3UiOiIyMDA0ODczMDAiLCJzdXBwbGllcl9pZCI6IiIsImJyYW5kIjoiYmVsbGl6IiwiaW1hZ2UiOiJodHRwczovL3Bpcy1zdGF0aWMtdHN0Lm1hZ2F6aW5lbHVpemEuY29tLmJyL3t3fXh7aH0vbWFsZXRhLWZyYW5xdWVpcmEtbWVkaWEtdGVlbi1iZWxsaXotMzUyNy9tYWdhemluZWx1aXphLzIwMDQ4NzMwMC85NmQxYjgxM2UzNGY5N2ZlOTc2Yjg1NWQ3YThkYjIwYy5qcGciLCJpbWFnZV91cmwiOiIyMDA0ODczMDAuanBnIiwicmVmZXJlbmNlIjoiQmVsbGl6IDM1MjciLCJhdmFpbGFibGVfc2VydmljZXMiOltdLCJhdmFpbGFibGVfd2FycmFudGllcyI6W10sInNoaXBwaW5nX2F2YWlsYWJpbGl0eSI6ImFsbF9yZWdpb25zIiwidmFyaWF0aW9ucyI6W10sImNhdGVnb3J5X2lkIjoiQ1AiLCJjYXRlZ29yeV9uYW1lIjoiQmVsZXphIGUgU2HDumRlIiwic3ViY2F0ZWdvcnlfaWQiOiJCU01BIiwic3ViY2F0ZWdvcnlfbmFtZSI6Ii0iLCJwcm92aWRlciI6Im1hZ2F6aW5lbHVpemEiLCJwcm92aWRlcl9kZXNjcmlwdGlvbiI6Ik1hZ2FsdSJ9LCJzZXJ2aWNlcyI6W10sImNhdGFsb2dfcHJpY2UiOiIxMzkuOTAiLCJ1cGRhdGVkX2F0IjoiMjAyMy0xMC0wNFQwODo0NTo1NC0wMzAwIiwidHlwZSI6InByb2R1Y3QiLCJiZW5lZml0cyI6W10sInN1YnRvdGFsIjoiMTM5LjkwIiwic3VnZ2VzdGlvbnMiOltdLCJtYXhfcXVhbnRpdHkiOm51bGx9XSwicHJvbW9jb2RlIjpudWxsLCJ0b3RhbF9hbW91bnQiOiIxMzkuOTAiLCJ0b3RhbF9iZXN0X2Ftb3VudCI6IjEzOS45MCIsImN1c3RvbWVyX2lkIjoiYTZiNDYxYjctMDlmNC00MTg2LWI3MDAtMDQwZGZiNzJkZDc0IiwiYmlsbGluZ19hZGRyZXNzX2lkIjoiNjE2MjcwMDAtODFjYi00ZWUyLWI5MGMtOTdlYjM1MTk4MzAxIiwic2hpcHBpbmdfYWRkcmVzc19pZCI6IjYxNjI3MDAwLTgxY2ItNGVlMi1iOTBjLTk3ZWIzNTE5ODMwMSIsInNoaXBwaW5nX2FkZHJlc3MiOnsiaWQiOiI2MTYyNzAwMC04MWNiLTRlZTItYjkwYy05N2ViMzUxOTgzMDEiLCJuYW1lIjoiTWV1IEVuZGVyZcOnbyIsInN0cmVldCI6IlJ1YSBkb3MgQWZhZ2FmaW5ob3MiLCJyZWNpcGllbnRfbmFtZSI6IkpvaG4gRG9lIiwibnVtYmVyIjoiMCIsImNvbXBsZW1lbnQiOiJBcHRvIDEiLCJkaXN0cmljdCI6IkNlbnRybyIsInppcF9jb2RlIjoiMTIzNDU2NzgiLCJjaXR5IjoiU8OjbyBQYXVsbyIsInN0YXRlIjoiU1AiLCJyZWZlcmVuY2UiOiJQZXJ0byBkYSBwYWRhcmlhIn0sInRvdGFscyI6eyJhbW91bnQiOiIxMzkuOTAiLCJjYXRhbG9nX2Ftb3VudCI6IjEzOS45MCIsImNoZWNrb3V0X2Ftb3VudCI6IjEzOS45MCIsIml0ZW1zX2Ftb3VudCI6IjEzOS45MCIsIml0ZW1zX2NhdGFsb2dfYW1vdW50IjoiMTM5LjkwIiwiaXRlbXNfY2hlY2tvdXRfYW1vdW50IjoiMTM5LjkwIiwiaXRlbXNfcXVhbnRpdHkiOiIxIiwiZGlzY291bnRfYW1vdW50IjoiMC4wMCIsInNoaXBwaW5nX2Ftb3VudCI6IjAuMDAiLCJkaXNjb3VudHMiOltdLCJ0YXhfYW1vdW50IjpudWxsLCJ0YXhfY2hlY2tvdXRfYW1vdW50IjpudWxsfSwiZGlzY291bnRzIjpbXSwiZGVsaXZlcmllcyI6W10sImRlbGl2ZXJ5X2Rpc2NsYWltZXJzIjpbXSwic2hpcHBpbmdfbWV0aG9kX2lkIjpudWxsLCJzaGlwcGluZ19wYWNrYWdlcyI6W10sImV4dGVuc2lvbnMiOnsiYnVkZHlfb3JpZ2luIjp7Im9yaWdpbiI6ImIyYjpwcm9ncmFtYXM6dGVzdGVtYWdhbHUifX0sImNhbXBhaWduX2NvZGUiOiIxNjg1MSJ9
+  recorded_at: Mon, 09 Oct 2023 12:30:08 GMT
+recorded_with: VCR 6.2.0

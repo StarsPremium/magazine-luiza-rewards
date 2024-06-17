@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/carts/71555ff9-91c3-4264-9095-06a169117cb3/items/invalid/seller/magazineluiza
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 10 Oct 2023 12:01:21 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 5c389b59-0a52-4172-ba10-d25fa54dd7de
+      X-Kong-Upstream-Latency:
+      - '116'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '[{"error_code":"ITEM_SELLER_NOT_FOUND","message":"Item Not Found","details":[{"error_message":"Item
+        invalid (seller magazineluiza) not found in cart","error_code":"error","error_detail":{}}],"links":[]}]'
+  recorded_at: Tue, 10 Oct 2023 12:01:21 GMT
+recorded_with: VCR 6.2.0

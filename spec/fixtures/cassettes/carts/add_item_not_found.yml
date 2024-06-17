@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/carts/71555ff9-91c3-4264-9095-06a169117cb3/items
+    body:
+      encoding: UTF-8
+      string: '{"sku":"invalid","seller":"magazineluiza","quantity":1}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 10 Oct 2023 11:23:45 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - ad0c6ac6-fdae-4455-b67d-443726bb3d5d
+      X-Kong-Upstream-Latency:
+      - '394'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '[{"error_code":"ITEM_NOT_FOUND","message":"Item Not Found","details":[{"message":"Item
+        invalid not found"}],"links":[]}]'
+  recorded_at: Tue, 10 Oct 2023 11:23:45 GMT
+recorded_with: VCR 6.2.0

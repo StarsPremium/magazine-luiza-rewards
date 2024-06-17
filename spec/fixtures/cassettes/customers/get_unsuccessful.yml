@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers?document=21099723000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 17:09:38 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 54eed63d-3811-4c34-9b00-2a44684c0db4
+      X-Kong-Upstream-Latency:
+      - '927'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '{"error_code":"NOT_FOUND","message":"The server did not find the requested
+        resource in the request","details":[{"message":"Customer not found for this
+        id"}],"links":[]}'
+  recorded_at: Thu, 05 Oct 2023 17:09:38 GMT
+recorded_with: VCR 6.2.0

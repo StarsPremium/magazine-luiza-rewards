@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/orders
+    body:
+      encoding: UTF-8
+      string: '{"cart_id":"d2d0408c-f03e-480a-9b95-1c6bcadbb873","customer_ip_address":"127.0.0.1","payment_method_id":"external","installments":1,"partner_order_id":"XYZ123","shipping_reference_contact":{"phone_ddd":"16","phone_number":"99999999"}}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 16 Oct 2023 19:02:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '639'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 312c8954-38bc-4f6c-8ff2-29d98b7087e2
+      X-Kong-Upstream-Latency:
+      - '29613'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjdXN0b21lcl9pZCI6IjA1OTQwZDg1LWExYjYtNDY1Mi05MzIwLTMwMGYzNWFkOWU4ZCIsInNoaXBwaW5nIjp7InBhY2thZ2VzIjpbeyJwcmljZSI6IjguMDIiLCJkZWxpdmVyeV90aW1lIjo3LCJkZWxpdmVyeV90eXBlX2lkIjoiMSIsImRlbGl2ZXJ5X3R5cGVfZGVzY3JpcHRpb24iOiJFbnRyZWdhIHBhZHLDo28iLCJpdGVtcyI6W3sic2t1IjoiMjAwNDg3MzAwIiwiYnVuZGxlX3NrdSI6bnVsbCwicXVhbnRpdHkiOjF9XSwic2VsbGVyIjoibWFnYXppbmVsdWl6YSIsInBhY2thZ2VfaWQiOiJkNzViNDZkMS0zZDhmLTQ5ZDItODFiMy0zNDU0Mjc3ODM0MDctMSJ9XX0sInNoaXBwaW5nX3RvdGFsIjoiOC4wMiIsInByb2R1Y3RfdG90YWwiOiIxMzkuOTAiLCJjcmVhdGVkX2F0IjoiMjAyMy0xMC0xNlQxOTowMjoyNS4yNDc2NDRaIiwidG90YWxfYW1vdW50IjoiMTQ3LjkyIiwiaXRlbXMiOlt7InNrdSI6IjIwMDQ4NzMwMCIsInNlbGxlciI6Im1hZ2F6aW5lbHVpemEiLCJzZWxsZXJfc2t1IjoiMjAwNDg3MzAwIiwicXVhbnRpdHkiOjEsImJ1bmRsZXMiOltdLCJzZWxsZXJfZGVzY3JpcHRpb24iOiJNYWdhbHUiLCJjYXRhbG9nX3ByaWNlIjoiMTM5LjkwIn1dLCJkaXNwbGF5X29yZGVyX2lkIjoiMTI3ODg1MDAwMzM0OTE4NyJ9
+  recorded_at: Mon, 16 Oct 2023 19:02:46 GMT
+recorded_with: VCR 6.2.0

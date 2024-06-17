@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers
+    body:
+      encoding: UTF-8
+      string: '{"name":"John Doe","email":"fulano@example.com","document":"12345678901","birth_date":"1990-01-01","address":{"zip_code":"12345678","street":"Rua
+        dos Afagafinhos","district":"Centro","number":"0","complement":"Apto 1","reference":"Perto
+        da padaria","city":"São Paulo","state":"SP"},"phone":{"area_code":"11","number":"999999999"},"responsible_name":"John
+        Doe","state_inscription":"123456789"}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 17:01:08 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - cb4d9a36-6828-458b-b643-1303c4e33b64
+      X-Kong-Upstream-Latency:
+      - '23'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '[{"error_code":"INVALID_DOCUMENT","message":"INVALID DOCUMENT","details":[{"message":"CPF
+        NOT VALID"}],"links":[]}]'
+  recorded_at: Thu, 05 Oct 2023 17:01:08 GMT
+recorded_with: VCR 6.2.0

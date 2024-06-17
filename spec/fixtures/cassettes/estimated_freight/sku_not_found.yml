@@ -1,0 +1,52 @@
+---
+http_interactions:
+  - request:
+      method: get
+      uri: http://b2b-platform-staging.luizalabs.com/api/v1/shipping/39809800/sku/201661209/seller/magazineluiza
+      body:
+        encoding: US-ASCII
+        string: ''
+      headers:
+        Accept-Encoding:
+          - none
+        Authorization:
+          - Bearer token
+        User-Agent:
+          - Faraday v2.7.11
+        Accept:
+          - '*/*'
+    response:
+      status:
+        code: 404
+        message: Not Found
+      headers:
+        Date:
+          - Sun, 01 Oct 2023 18:05:24 GMT
+        Content-Type:
+          - application/json;charset=utf-8
+        Transfer-Encoding:
+          - chunked
+        Connection:
+          - keep-alive
+        Vary:
+          - Origin
+        Access-Control-Allow-Origin:
+          - '*'
+        Access-Control-Expose-Headers:
+          - _limit,_offset,_page,_total_pages,_total_items,content-range
+        Kong-Request-Id:
+          - 76530559-61dc-423d-ab4c-cdd49ea7a8ff
+        X-Kong-Upstream-Latency:
+          - '3230'
+        X-Kong-Proxy-Latency:
+          - '1'
+        Via:
+          - kong/2.8.3
+      body:
+        encoding: UTF-8
+        string:
+          '[{"error_code":4012,"message":"The server did not find the requested
+          resource in the request","details":[{"app_error_code":1003,"description":"Product
+          not exist","message":null}],"links":[]}]'
+    recorded_at: Sun, 01 Oct 2023 18:05:24 GMT
+recorded_with: VCR 6.2.0

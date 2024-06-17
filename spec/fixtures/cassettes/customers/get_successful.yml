@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers?document=33226126008
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 17:09:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - a75add16-8d0e-4a86-bc32-756d0116c146
+      X-Kong-Upstream-Latency:
+      - '122'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '{"id":"a6b461b7-09f4-4186-b700-040dfb72dd74","disabled":false}'
+  recorded_at: Thu, 05 Oct 2023 17:09:01 GMT
+recorded_with: VCR 6.2.0

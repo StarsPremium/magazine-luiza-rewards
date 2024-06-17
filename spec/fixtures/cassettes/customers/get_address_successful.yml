@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers/a6b461b7-09f4-4186-b700-040dfb72dd74/address?complement=Apto%201&number=0&street=Rua%20dos%20Afagafinhos&zip_code=12345678
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 18:09:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 5fb3a33f-014b-4db5-b245-ca8198b575ee
+      X-Kong-Upstream-Latency:
+      - '192'
+      X-Kong-Proxy-Latency:
+      - '2'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '{"id":"61627000-81cb-4ee2-b90c-97eb35198301"}'
+  recorded_at: Thu, 05 Oct 2023 18:09:45 GMT
+recorded_with: VCR 6.2.0

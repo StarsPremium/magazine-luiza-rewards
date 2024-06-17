@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/customers
+    body:
+      encoding: UTF-8
+      string: '{"name":"John Doe","email":"fulano@example.com","document":"33226126008","birth_date":"1990-01-01","address":{"zip_code":"12345678","street":"Rua
+        dos Afagafinhos","district":"Centro","number":"0","complement":"Apto 1","reference":"Perto
+        da padaria","city":"São Paulo","state":"SP"},"phone":{"area_code":"11","number":"999999999"},"responsible_name":"John
+        Doe","state_inscription":"123456789"}'
+    headers:
+      Accept-Encoding:
+      - none
+      Authorization:
+      - Bearer fake-token
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 16:49:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '97'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_page,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - 2b244263-a4a6-4e83-ae32-864ea8e37f44
+      X-Kong-Upstream-Latency:
+      - '3597'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '{"id":"a6b461b7-09f4-4186-b700-040dfb72dd74","address_id":"61627000-81cb-4ee2-b90c-97eb35198301"}'
+  recorded_at: Thu, 05 Oct 2023 16:49:08 GMT
+recorded_with: VCR 6.2.0

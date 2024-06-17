@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://b2b-platform-staging.luizalabs.com/api/v1/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"username":"wrong_username","password":"pass123"}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 26 Sep 2023 19:14:35 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - _limit,_offset,_total_pages,_total_items,content-range
+      Kong-Request-Id:
+      - b621f2e4-9c37-4d5b-95fc-5bdbe841869a
+      X-Kong-Upstream-Latency:
+      - '118'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/2.8.3
+    body:
+      encoding: UTF-8
+      string: '    [{"message":"Client authentication failed","error_code":"INVALID_CLIENT","links":[{"href":"https://developer.magalu.com/docs/api/orders/v1/#error-AUTHENTICATION_FAILURE"}],"details":[{"location":"header","issue":"AUTHENTICATION_FAILURE","field":"Authorization","description":"Authentication
+        failed due to missing authorization header, or invalid authentication credentials"}]}]
+
+        '
+  recorded_at: Tue, 26 Sep 2023 19:14:35 GMT
+recorded_with: VCR 6.2.0
