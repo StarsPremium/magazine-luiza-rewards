@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'lib/magazine_luiza_rewards/version'
+require_relative 'lib/magazine_luiza_rewards_v2/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'magazine_luiza_rewards'
+  spec.name = 'magazine_luiza_rewards_v2'
   spec.version = MagazineLuizaRewardsV2::VERSION
   spec.authors = ['Ronaldo de Sousa Araujo']
   spec.email = ['contato@ronaldoaraujo.eti.br']
 
   spec.summary = 'Integration with the rewards program of Magazine Luiza'
-  spec.homepage = 'https://github.com/StarsPremium/magazine_luiza_rewards'
+  spec.homepage = 'https://github.com/StarsPremium/magazine-luiza-rewards'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.7.8'
 

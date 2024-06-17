@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'magazine_luiza_rewards'
+require 'magazine_luiza_rewards_v2'
 require 'rspec/dry/struct'
 
 support_dir = "#{MagazineLuizaRewardsV2.root}/spec/support/**/*.rb"
