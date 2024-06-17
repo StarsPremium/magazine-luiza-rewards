@@ -6,17 +6,8 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 2.7
 
-Naming/VariableNumber:
-  Enabled: false
-
-Naming/MethodParameterName:
-  Enabled: false
-
 Layout/LineLength:
   Max: 100
-
-Layout/MethodLength:
-  Max: 12
 
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: false
@@ -37,6 +28,54 @@ Lint/RaiseException:
   Enabled: false
 
 Lint/StructNewOverride:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "Rakefile"
+    - "**/*_spec.rb"
+    - "spec/**/*.rb"
+
+Metrics/MethodLength:
+  Max: 12
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/ImplicitSubject:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: true
+  Prefixes:
+    - for
+    - when
+    - with
+    - without
+    - and
+
+RSpec/VerifiedDoubleReference:
+  Enabled: false
+
+RSpec/DescribeClass:
   Enabled: false
 
 Style/StringLiterals:
@@ -81,37 +120,4 @@ Style/OptionalBooleanParameter:
   Enabled: false
 
 Style/MultilineBlockChain:
-  Enabled: false
-
-RSpec/LetSetup:
-  Enabled: false
-
-RSpec/NestedGroups:
-  Enabled: false
-
-RSpec/AnyInstance:
-  Enabled: false
-
-RSpec/MultipleMemoizedHelpers:
-  Enabled: false
-
-RSpec/ImplicitSubject:
-  Enabled: false
-
-RSpec/VerifiedDoubles:
-  Enabled: false
-
-RSpec/ContextWording:
-  Enabled: true
-  Prefixes:
-    - for
-    - when
-    - with
-    - without
-    - and
-
-RSpec/VerifiedDoubleReference:
-  Enabled: false
-
-RSpec/DescribeClass:
   Enabled: false
