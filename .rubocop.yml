@@ -9,6 +9,9 @@ AllCops:
 Layout/LineLength:
   Max: 100
 
+Metrics/MethodLength:
+  Max: 12
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes
@@ -20,13 +23,5 @@ Style/StringLiteralsInInterpolation:
 Style/Documentation:
   Enabled: false
 
-RSpec/FilePath:
-  Exclude:
-    - 'spec/lib/magazine_luiza_rewards/models/*'
-
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
-
-RSpec/SpecFilePathFormat:
-  Exclude:
-    - 'spec/lib/magazine_luiza_rewards/models/*'
