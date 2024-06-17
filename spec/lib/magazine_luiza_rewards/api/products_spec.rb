@@ -2,11 +2,11 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Api::Products do
+RSpec.describe MagazineLuizaRewardsV2::Api::Products do
   subject(:api_products) { described_class.new(client) }
 
   let(:token) { 'fake-token' }
-  let(:client) { MagazineLuizaRewards::Client.new(token) }
+  let(:client) { MagazineLuizaRewardsV2::Client.new(token) }
 
   describe '#products' do
     subject(:products) { api_products.products(limit, page, filters) }
@@ -18,7 +18,7 @@ RSpec.describe MagazineLuizaRewards::Api::Products do
       let(:filters) { {} }
 
       it { expect(products).to be_a(Array) }
-      it { expect(products).to all(be_a(MagazineLuizaRewards::Product)) }
+      it { expect(products).to all(be_a(MagazineLuizaRewardsV2::Product)) }
       it { expect(products.size).to eq(10) }
     end
 
@@ -26,7 +26,7 @@ RSpec.describe MagazineLuizaRewards::Api::Products do
       let(:filters) { { brand: 'apple' } }
 
       it { expect(products).to be_a(Array) }
-      it { expect(products).to all(be_a(MagazineLuizaRewards::Product)) }
+      it { expect(products).to all(be_a(MagazineLuizaRewardsV2::Product)) }
       it { expect(products.map(&:brand)).to all(eq('Apple')) }
     end
   end
@@ -38,7 +38,7 @@ RSpec.describe MagazineLuizaRewards::Api::Products do
       let(:sku) { '229653300' }
       let(:seller) { 'magazineluiza' }
 
-      it { expect(product_info).to be_a(MagazineLuizaRewards::Product) }
+      it { expect(product_info).to be_a(MagazineLuizaRewardsV2::Product) }
       it { expect(product_info.sku).to eq(sku) }
       it { expect(product_info.seller_id).to eq(seller) }
     end
@@ -48,7 +48,7 @@ RSpec.describe MagazineLuizaRewards::Api::Products do
       let(:sku) { '999_999' }
       let(:seller) { 'unknown' }
 
-      it { expect { product_info }.to raise_error(MagazineLuizaRewards::Exceptions::NotFoundError) }
+      it { expect { product_info }.to raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError) }
     end
   end
 
@@ -62,29 +62,29 @@ RSpec.describe MagazineLuizaRewards::Api::Products do
     context 'when product exists and show_payment_methods is false',
             vcr: { cassette_name: 'products/price_request_without_payment_methods' } do
       let(:product) do
-        MagazineLuizaRewards::Product.new(sku: '229653300', seller_id: 'magazineluiza')
+        MagazineLuizaRewardsV2::Product.new(sku: '229653300', seller_id: 'magazineluiza')
       end
 
       it { expect(pricing_and_availability).to be_a(Array) }
       it { expect(pricing_and_availability.size).to eq(1) }
-      it { expect(pricing_and_availability).to all(be_a(MagazineLuizaRewards::ProductPrice)) }
+      it { expect(pricing_and_availability).to all(be_a(MagazineLuizaRewardsV2::ProductPrice)) }
     end
 
     describe 'when product exists and show_payment_methods is true',
              vcr: { cassette_name: 'products/price_request_with_payment_methods' } do
       let(:show_payment_methods) { true }
       let(:product) do
-        MagazineLuizaRewards::Product.new(sku: '229653300', seller_id: 'magazineluiza')
+        MagazineLuizaRewardsV2::Product.new(sku: '229653300', seller_id: 'magazineluiza')
       end
 
       it { expect(pricing_and_availability).to be_a(Array) }
       it { expect(pricing_and_availability.size).to eq(1) }
-      it { expect(pricing_and_availability).to all(be_a(MagazineLuizaRewards::ProductPrice)) }
+      it { expect(pricing_and_availability).to all(be_a(MagazineLuizaRewardsV2::ProductPrice)) }
     end
 
     context 'when product does not exist',
             vcr: { cassette_name: 'products/price_not_found_request' } do
-      let(:product) { MagazineLuizaRewards::Product.new(sku: '999_999', seller_id: 'unknown') }
+      let(:product) { MagazineLuizaRewardsV2::Product.new(sku: '999_999', seller_id: 'unknown') }
 
       it { expect(pricing_and_availability).to be_a(Array) }
       it { expect(pricing_and_availability.size).to eq(0) }

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::TokenInfo do
+RSpec.describe MagazineLuizaRewardsV2::TokenInfo do
   describe 'attributes' do
     subject { described_class }
 

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Phone do
+RSpec.describe MagazineLuizaRewardsV2::Phone do
   describe 'attributes' do
     subject(:phone) { described_class }
 

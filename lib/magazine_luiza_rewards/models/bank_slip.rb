@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class BankSlip < Dry::Struct
     attribute :our_number, Types::Coercible::String
     attribute :doc_number, Types::Coercible::String

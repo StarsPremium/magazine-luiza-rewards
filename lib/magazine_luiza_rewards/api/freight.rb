@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   module Api
     class Freight < Base
       def calculate(zip_code, cart_id)

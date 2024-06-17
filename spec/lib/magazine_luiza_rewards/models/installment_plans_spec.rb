@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::InstallmentPlans do
+RSpec.describe MagazineLuizaRewardsV2::InstallmentPlans do
   describe 'attributes' do
     subject(:installment_plans) { described_class }
 

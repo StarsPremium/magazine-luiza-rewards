@@ -3,7 +3,7 @@
 require 'magazine_luiza_rewards'
 require 'rspec/dry/struct'
 
-support_dir = "#{MagazineLuizaRewards.root}/spec/support/**/*.rb"
+support_dir = "#{MagazineLuizaRewardsV2.root}/spec/support/**/*.rb"
 Dir[support_dir].sort.each { |f| require f }
 
 RSpec.configure do |config|

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Package do
+RSpec.describe MagazineLuizaRewardsV2::Package do
   describe 'attributes' do
     subject(:package) { described_class }
 
@@ -10,7 +10,7 @@ RSpec.describe MagazineLuizaRewards::Package do
     it { is_expected.to have_attribute(:delivery_time, Types::Coercible::String) }
     it { is_expected.to have_attribute(:delivery_type_id, Types::Coercible::String) }
     it { is_expected.to have_attribute(:delivery_type_description, Types::Coercible::String) }
-    it { is_expected.to have_attribute(:items, Types::Array.of(MagazineLuizaRewards::PackageItem)) }
+    it { is_expected.to have_attribute(:items, Types::Array.of(MagazineLuizaRewardsV2::PackageItem)) }
     it { is_expected.to have_attribute(:seller, Types::Coercible::String) }
     it { is_expected.to have_attribute(:package_id, Types::Coercible::String) }
   end

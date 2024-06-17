@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class CalculatedFreight < Dry::Struct
     attribute :disclaimers, Types::Array.of(Types::Coercible::String)
     attribute :deliveries, Types::Array.of(Delivery)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Customer < Dry::Struct
     attribute :name, Types::Coercible::String
     attribute :email, Types::Coercible::String

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   module Api
     class Products < Base
       def products(limit = 10, page = 1, filters = {})

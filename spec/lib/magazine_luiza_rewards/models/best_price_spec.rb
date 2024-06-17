@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::BestPrice do
+RSpec.describe MagazineLuizaRewardsV2::BestPrice do
   describe 'attributes' do
     subject(:best_price) { described_class }
 

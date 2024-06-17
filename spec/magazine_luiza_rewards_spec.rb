@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe MagazineLuizaRewards do
+RSpec.describe MagazineLuizaRewardsV2 do
   it 'has a version number' do
-    expect(MagazineLuizaRewards::VERSION).not_to be_nil
+    expect(MagazineLuizaRewardsV2::VERSION).not_to be_nil
   end
 end

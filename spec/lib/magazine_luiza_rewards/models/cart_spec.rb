@@ -2,12 +2,12 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Cart do
+RSpec.describe MagazineLuizaRewardsV2::Cart do
   describe 'attributes' do
     subject(:cart) { described_class }
 
     it { is_expected.to have_attribute(:id, Types::Coercible::String) }
-    it { is_expected.to have_attribute(:items, Types::Array.of(MagazineLuizaRewards::CartItem)) }
+    it { is_expected.to have_attribute(:items, Types::Array.of(MagazineLuizaRewardsV2::CartItem)) }
     it { is_expected.to have_attribute(:promocode, Types::Coercible::String) }
     it { is_expected.to have_attribute(:total_amount, Types::Coercible::Decimal) }
     it { is_expected.to have_attribute(:total_best_amount, Types::Coercible::Decimal) }
@@ -17,7 +17,7 @@ RSpec.describe MagazineLuizaRewards::Cart do
 
     it do
       expect(cart).to \
-        have_attribute(:deliveries, Types::Array.of(MagazineLuizaRewards::PartialUpdateDeliveries))
+        have_attribute(:deliveries, Types::Array.of(MagazineLuizaRewardsV2::PartialUpdateDeliveries))
     end
   end
 end

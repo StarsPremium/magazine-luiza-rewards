@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::ProductBundle do
+RSpec.describe MagazineLuizaRewardsV2::ProductBundle do
   describe 'attributes' do
     subject { described_class }
 

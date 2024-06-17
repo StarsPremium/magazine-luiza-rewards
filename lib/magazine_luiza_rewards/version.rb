@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   VERSION = '0.1.0'
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Product < Dry::Struct
     attribute? :active, Types::Bool
     attribute? :attributes, Types::Array.of(ProductAttribute)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class ProductBundle < Dry::Struct
     attribute :brand, Types::Coercible::String
     attribute :price, Types::Coercible::String

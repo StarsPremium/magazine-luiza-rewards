@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Modality < Dry::Struct
     attribute :id, Types::Coercible::String
     attribute :type, Types::Coercible::String

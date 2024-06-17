@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Product do
+RSpec.describe MagazineLuizaRewardsV2::Product do
   describe 'attributes' do
     subject(:product) { described_class }
 
@@ -27,26 +27,26 @@ RSpec.describe MagazineLuizaRewards::Product do
 
     it do
       expect(product).to have_attribute(:attributes,
-                                        Types::Array.of(MagazineLuizaRewards::ProductAttribute))
+                                        Types::Array.of(MagazineLuizaRewardsV2::ProductAttribute))
     end
 
     it do
-      expect(product).to have_attribute(:dimensions, MagazineLuizaRewards::ProductDimension)
+      expect(product).to have_attribute(:dimensions, MagazineLuizaRewardsV2::ProductDimension)
     end
 
     it do
       expect(product).to have_attribute(:bundles,
-                                        Types::Array.of(MagazineLuizaRewards::ProductBundle))
+                                        Types::Array.of(MagazineLuizaRewardsV2::ProductBundle))
     end
 
     it do
       expect(product).to have_attribute(:categories,
-                                        Types::Array.of(MagazineLuizaRewards::Category))
+                                        Types::Array.of(MagazineLuizaRewardsV2::Category))
     end
 
     it do
       expect(product).to have_attribute(:factsheet,
-                                        Types::Array.of(MagazineLuizaRewards::Factsheet))
+                                        Types::Array.of(MagazineLuizaRewardsV2::Factsheet))
     end
   end
 end

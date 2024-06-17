@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Category < Dry::Struct
     attribute :id, Types::Coercible::String
     attribute :name, Types::Coercible::String

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class BestPrice < Dry::Struct
     attribute? :discount, Types::Coercible::String
     attribute? :payment_method_description, Types::Coercible::String

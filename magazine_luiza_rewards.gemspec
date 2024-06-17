@@ -4,7 +4,7 @@ require_relative 'lib/magazine_luiza_rewards/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'magazine_luiza_rewards'
-  spec.version = MagazineLuizaRewards::VERSION
+  spec.version = MagazineLuizaRewardsV2::VERSION
   spec.authors = ['Ronaldo de Sousa Araujo']
   spec.email = ['contato@ronaldoaraujo.eti.br']
 

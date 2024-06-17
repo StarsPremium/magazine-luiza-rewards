@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::UnavailableDelivery do
+RSpec.describe MagazineLuizaRewardsV2::UnavailableDelivery do
   describe 'attributes' do
     subject(:unavailable_delivery) { described_class }
 
@@ -12,7 +12,7 @@ RSpec.describe MagazineLuizaRewards::UnavailableDelivery do
 
     it do
       expect(unavailable_delivery).to \
-        have_attribute(:items, Types::Array.of(MagazineLuizaRewards::DeliveryItem))
+        have_attribute(:items, Types::Array.of(MagazineLuizaRewardsV2::DeliveryItem))
     end
   end
 end

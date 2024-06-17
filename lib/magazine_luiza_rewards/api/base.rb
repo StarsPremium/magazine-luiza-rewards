@@ -2,13 +2,13 @@
 
 require 'forwardable'
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   module Api
     class Base
       extend Forwardable
       include Exceptions
 
-      def initialize(client = MagazineLuizaRewards::Client.new)
+      def initialize(client = MagazineLuizaRewardsV2::Client.new)
         @client = client
       end
 

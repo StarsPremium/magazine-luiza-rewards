@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::BankSlip do
+RSpec.describe MagazineLuizaRewardsV2::BankSlip do
   describe 'attributes' do
     subject(:bank_slip) { described_class }
 

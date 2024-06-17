@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class DeliveryParameters < Dry::Struct
     attribute :provider, Types::Coercible::String
     attribute :recipient_name, Types::Coercible::String

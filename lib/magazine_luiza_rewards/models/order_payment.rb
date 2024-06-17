@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class OrderPayment < Dry::Struct
     attribute :payment_method_id, Types::Coercible::String
     attribute :payment_method_name, Types::Coercible::String

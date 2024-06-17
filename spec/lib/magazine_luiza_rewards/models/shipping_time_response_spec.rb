@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::ShippingTimeResponse do
+RSpec.describe MagazineLuizaRewardsV2::ShippingTimeResponse do
   describe 'attributes' do
     subject(:shipping_time_response) { described_class }
 
