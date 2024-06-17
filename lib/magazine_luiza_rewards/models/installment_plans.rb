@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class InstallmentPlans < Dry::Struct
     attribute :discount, Types::Coercible::String
     attribute :discount_amount, Types::Coercible::String

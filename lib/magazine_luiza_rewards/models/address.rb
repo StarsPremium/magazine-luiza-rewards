@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Address < Dry::Struct
     attribute :zip_code, Types::Coercible::String
     attribute :street, Types::Coercible::String

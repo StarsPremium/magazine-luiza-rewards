@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Address do
+RSpec.describe MagazineLuizaRewardsV2::Address do
   describe 'attributes' do
     subject(:address) { described_class }
 

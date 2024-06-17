@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::FactsheetElement do
+RSpec.describe MagazineLuizaRewardsV2::FactsheetElement do
   describe 'attributes' do
     subject(:element) { described_class }
 
@@ -13,7 +13,7 @@ RSpec.describe MagazineLuizaRewards::FactsheetElement do
     it do
       expect(element).to have_attribute(:elements,
                                         Types::Array.of(
-                                          MagazineLuizaRewards::FactsheetElementElement
+                                          MagazineLuizaRewardsV2::FactsheetElementElement
                                         ))
     end
   end

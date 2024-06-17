@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   module Exceptions
     APIExceptionError = Class.new(StandardError)
     BadRequestError = Class.new(APIExceptionError)

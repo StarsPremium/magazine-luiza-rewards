@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class DeliveryItem < Dry::Struct
     attribute :sku, Types::Coercible::String
     attribute :quantity, Types::Coercible::Decimal

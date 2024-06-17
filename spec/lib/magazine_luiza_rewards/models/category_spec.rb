@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Category do
+RSpec.describe MagazineLuizaRewardsV2::Category do
   describe 'attributes' do
     subject(:category) { described_class }
 
@@ -11,7 +11,7 @@ RSpec.describe MagazineLuizaRewards::Category do
 
     it do
       expect(category).to have_attribute(:sub_categories,
-                                         Types::Array.of(MagazineLuizaRewards::SubCategory))
+                                         Types::Array.of(MagazineLuizaRewardsV2::SubCategory))
     end
   end
 end

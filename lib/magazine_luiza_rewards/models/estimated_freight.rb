@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class EstimatedFreight < Dry::Struct
     attribute :sku, Types::String
     attribute :seller, Types::String

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::PaymentInfo do
+RSpec.describe MagazineLuizaRewardsV2::PaymentInfo do
   describe 'attributes' do
     subject(:payment_info) { described_class }
 

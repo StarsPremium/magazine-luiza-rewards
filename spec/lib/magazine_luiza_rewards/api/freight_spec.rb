@@ -2,11 +2,11 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Api::Freight do
+RSpec.describe MagazineLuizaRewardsV2::Api::Freight do
   subject(:freight_api) { described_class.new(client) }
 
   let(:token) { 'fake-token' }
-  let(:client) { MagazineLuizaRewards::Client.new(token) }
+  let(:client) { MagazineLuizaRewardsV2::Client.new(token) }
 
   describe '#calculate' do
     subject(:calculated) { freight_api.calculate(zip_code, cart_id) }
@@ -15,7 +15,7 @@ RSpec.describe MagazineLuizaRewards::Api::Freight do
       let(:zip_code) { '14302536' }
       let(:cart_id) { '3a77f5a9-bb54-4f57-af63-145d517d4d22' }
 
-      it { expect(calculated).to be_a(MagazineLuizaRewards::CalculatedFreight) }
+      it { expect(calculated).to be_a(MagazineLuizaRewardsV2::CalculatedFreight) }
     end
 
     context 'when cart not found', vcr: { cassette_name: 'calculate_freight/not_found' } do
@@ -24,7 +24,7 @@ RSpec.describe MagazineLuizaRewards::Api::Freight do
 
       it do
         expect { calculated }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       "Cart #{cart_id} does not exist")
       end
     end
@@ -39,10 +39,10 @@ RSpec.describe MagazineLuizaRewards::Api::Freight do
       let(:seller) { 'magazineluiza' }
       let(:delivery_type) { estimated.delivery_types.first }
 
-      it { expect(estimated).to be_a(MagazineLuizaRewards::EstimatedFreight) }
+      it { expect(estimated).to be_a(MagazineLuizaRewardsV2::EstimatedFreight) }
       it { expect(estimated.sku).to eq(sku) }
       it { expect(estimated.seller).to eq(seller) }
-      it { expect(estimated.delivery_types).to all(be_a(MagazineLuizaRewards::DeliveryType)) }
+      it { expect(estimated.delivery_types).to all(be_a(MagazineLuizaRewardsV2::DeliveryType)) }
       it { expect(delivery_type.type).to eq('conventional') }
       it { expect(delivery_type.time).to eq(7) }
       it { expect(delivery_type.description).to eq('Entrega padrão') }
@@ -57,7 +57,7 @@ RSpec.describe MagazineLuizaRewards::Api::Freight do
 
       it do
         expect { estimated }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'The server did not find the requested resource in the request')
       end
     end
@@ -69,7 +69,7 @@ RSpec.describe MagazineLuizaRewards::Api::Freight do
 
       it do
         expect { estimated }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::BadRequestError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::BadRequestError,
                       'Item not available to region')
       end
     end

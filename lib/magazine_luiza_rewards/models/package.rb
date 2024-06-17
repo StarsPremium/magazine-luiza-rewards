@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Package < Dry::Struct
     attribute :price, Types::Coercible::Decimal
     attribute :delivery_time, Types::Coercible::String

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::SubCategory do
+RSpec.describe MagazineLuizaRewardsV2::SubCategory do
   describe 'attributes' do
     subject { described_class }
 

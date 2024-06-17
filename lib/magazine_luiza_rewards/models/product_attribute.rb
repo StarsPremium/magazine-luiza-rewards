@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class ProductAttribute < Dry::Struct
     attribute :type, Types::Coercible::String
     attribute :value, Types::Coercible::String

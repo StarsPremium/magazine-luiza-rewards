@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::FactsheetElementElement do
+RSpec.describe MagazineLuizaRewardsV2::FactsheetElementElement do
   describe 'attributes' do
     subject { described_class }
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class Order < Dry::Struct
     attribute :customer_id, Types::Coercible::String
     attribute :shipping do

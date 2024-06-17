@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class PackageItem < Dry::Struct
     attribute :sku, Types::Coercible::String
     attribute :bundle_sku, Types::Coercible::String

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::DeliveryType do
+RSpec.describe MagazineLuizaRewardsV2::DeliveryType do
   describe 'attributes' do
     subject(:delivery_type) { described_class }
 

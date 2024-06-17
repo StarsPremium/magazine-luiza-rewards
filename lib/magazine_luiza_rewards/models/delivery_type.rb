@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class DeliveryType < Dry::Struct
     attribute :time, Types::Integer
     attribute :type, Types::String

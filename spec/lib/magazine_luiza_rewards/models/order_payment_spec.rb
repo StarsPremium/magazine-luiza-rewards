@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::OrderPayment do
+RSpec.describe MagazineLuizaRewardsV2::OrderPayment do
   describe 'attributes' do
     subject(:order_payment) { described_class }
 
@@ -20,6 +20,6 @@ RSpec.describe MagazineLuizaRewards::OrderPayment do
     it { is_expected.to have_attribute(:payment_url, Types::Coercible::String) }
     it { is_expected.to have_attribute(:emv_response, Types::Coercible::String) }
     it { is_expected.to have_attribute(:gateway_status_code, Types::Coercible::String) }
-    it { is_expected.to have_attribute(:pix, MagazineLuizaRewards::Pix) }
+    it { is_expected.to have_attribute(:pix, MagazineLuizaRewardsV2::Pix) }
   end
 end

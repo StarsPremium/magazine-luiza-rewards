@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class OrderRequest < Dry::Struct
     attribute :cart_id, Types::Coercible::String
     attribute :customer_ip_address, Types::Coercible::String

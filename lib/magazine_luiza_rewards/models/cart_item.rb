@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   class CartItem < Dry::Struct
     attribute? :list_price, Types::Coercible::Decimal
     attribute? :price, Types::Coercible::Decimal

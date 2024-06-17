@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Modality do
+RSpec.describe MagazineLuizaRewardsV2::Modality do
   describe 'attributes' do
     subject(:modality) { described_class }
 
@@ -11,7 +11,7 @@ RSpec.describe MagazineLuizaRewards::Modality do
 
     it do
       expect(modality).to have_attribute(:delivery_parameters,
-                                         MagazineLuizaRewards::DeliveryParameters)
+                                         MagazineLuizaRewardsV2::DeliveryParameters)
     end
   end
 end

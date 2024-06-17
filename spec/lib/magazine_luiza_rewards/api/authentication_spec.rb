@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Api::Authentication do
+RSpec.describe MagazineLuizaRewardsV2::Api::Authentication do
   subject(:authentication) { described_class.new }
 
   describe '#generate_token' do
@@ -34,7 +34,7 @@ RSpec.describe MagazineLuizaRewards::Api::Authentication do
     end
 
     context 'when successful', vcr: { cassette_name: 'success_authentication_request' } do
-      it { is_expected.to be_a(MagazineLuizaRewards::TokenInfo) }
+      it { is_expected.to be_a(MagazineLuizaRewardsV2::TokenInfo) }
       it { expect(token_info.access_token).to be_a(String) }
       it { expect(token_info.expires_in).to be_a(Integer) }
       it { expect(token_info.access_token).to eq(expected_token) }
@@ -45,7 +45,7 @@ RSpec.describe MagazineLuizaRewards::Api::Authentication do
       let(:username) { 'wrong_username' }
 
       it do
-        expect { token_info }.to raise_error(MagazineLuizaRewards::Exceptions::UnauthorizedError)
+        expect { token_info }.to raise_error(MagazineLuizaRewardsV2::Exceptions::UnauthorizedError)
       end
     end
   end

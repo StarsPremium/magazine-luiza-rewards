@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::ProductPrice do
+RSpec.describe MagazineLuizaRewardsV2::ProductPrice do
   describe 'attributes' do
     subject { described_class }
 
@@ -11,7 +11,7 @@ RSpec.describe MagazineLuizaRewards::ProductPrice do
     it { is_expected.to have_attribute(:availability, Types::Coercible::String) }
     it { is_expected.to have_attribute(:list_price, Types::Coercible::String) }
     it { is_expected.to have_attribute(:price, Types::Coercible::String) }
-    it { is_expected.to have_attribute(:best_price, MagazineLuizaRewards::BestPrice) }
-    it { is_expected.to have_attribute(:payment_methods, MagazineLuizaRewards::PaymentMethods) }
+    it { is_expected.to have_attribute(:best_price, MagazineLuizaRewardsV2::BestPrice) }
+    it { is_expected.to have_attribute(:payment_methods, MagazineLuizaRewardsV2::PaymentMethods) }
   end
 end

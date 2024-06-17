@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::CartItem do
+RSpec.describe MagazineLuizaRewardsV2::CartItem do
   describe 'attributes' do
     subject(:cart_item) { described_class }
 

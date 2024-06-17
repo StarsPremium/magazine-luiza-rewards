@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Pix do
+RSpec.describe MagazineLuizaRewardsV2::Pix do
   describe 'attributes' do
     subject(:pix) { described_class }
 

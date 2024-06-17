@@ -2,22 +2,22 @@
 
 require 'spec_helper'
 
-RSpec.describe MagazineLuizaRewards::Api::Carts do
+RSpec.describe MagazineLuizaRewardsV2::Api::Carts do
   subject(:api_carts) { described_class.new(client) }
 
   let(:token) { 'fake-token' }
-  let(:client) { MagazineLuizaRewards::Client.new(token) }
+  let(:client) { MagazineLuizaRewardsV2::Client.new(token) }
 
   describe '#create' do
     subject(:cart) { api_carts.create(items) }
 
     let(:sku) { '200487300' }
     let(:items) do
-      [MagazineLuizaRewards::CartItem.new(sku: sku, seller: 'magazineluiza', quantity: 1)]
+      [MagazineLuizaRewardsV2::CartItem.new(sku: sku, seller: 'magazineluiza', quantity: 1)]
     end
 
     context 'when successfull', vcr: { cassette_name: 'carts/successful' } do
-      it { expect(cart).to be_a(MagazineLuizaRewards::Cart) }
+      it { expect(cart).to be_a(MagazineLuizaRewardsV2::Cart) }
       it { expect(cart.items.first.sku).to eq('200487300') }
       it { expect(cart.items.first.seller).to eq('magazineluiza') }
       it { expect(cart.items.first.quantity).to eq(1) }
@@ -29,7 +29,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
       let(:sku) { 'invalid' }
 
       it do
-        expect { cart }.to raise_error(MagazineLuizaRewards::Exceptions::BadRequestError,
+        expect { cart }.to raise_error(MagazineLuizaRewardsV2::Exceptions::BadRequestError,
                                        'Item Not Found')
       end
     end
@@ -41,7 +41,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
     let(:card_id) { '71555ff9-91c3-4264-9095-06a169117cb3' }
 
     context 'when successfull', vcr: { cassette_name: 'carts/get_successful' } do
-      it { expect(cart).to be_a(MagazineLuizaRewards::Cart) }
+      it { expect(cart).to be_a(MagazineLuizaRewardsV2::Cart) }
       it { expect(cart.items.first.sku).to eq('200487300') }
       it { expect(cart.items.first.seller).to eq('magazineluiza') }
       it { expect(cart.items.first.quantity).to eq(1) }
@@ -54,7 +54,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
       it do
         expect { cart }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'The server did not find the requested resource in the request')
       end
     end
@@ -65,14 +65,14 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
     let(:card_id) { '71555ff9-91c3-4264-9095-06a169117cb3' }
     let(:cart) do
-      MagazineLuizaRewards::Cart.new(
+      MagazineLuizaRewardsV2::Cart.new(
         id: card_id,
         shipping_address_id: '61627000-81cb-4ee2-b90c-97eb35198301',
         customer_id: 'a6b461b7-09f4-4186-b700-040dfb72dd74',
         deliveries: [
-          MagazineLuizaRewards::PartialUpdateDeliveries.new(
+          MagazineLuizaRewardsV2::PartialUpdateDeliveries.new(
             id: '55956efe-ffba-41bf-a073-df43c4483d54-1',
-            modality: MagazineLuizaRewards::Modality.new(
+            modality: MagazineLuizaRewardsV2::Modality.new(
               id: '1',
               type: 'conventional'
             )
@@ -82,7 +82,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
     end
 
     context 'when successfull', vcr: { cassette_name: 'carts/update_successful' } do
-      it { expect(update).to be_a(MagazineLuizaRewards::Cart) }
+      it { expect(update).to be_a(MagazineLuizaRewardsV2::Cart) }
       it { expect(update.shipping_address_id).to eq('61627000-81cb-4ee2-b90c-97eb35198301') }
       it { expect(update.customer_id).to eq('a6b461b7-09f4-4186-b700-040dfb72dd74') }
       it { expect(update.billing_address_id).to eq('61627000-81cb-4ee2-b90c-97eb35198301') }
@@ -93,7 +93,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
       it do
         expect { update }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'The server did not find the requested resource in the request')
       end
     end
@@ -105,11 +105,11 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
     let(:card_id) { '71555ff9-91c3-4264-9095-06a169117cb3' }
     let(:sku) { '145855500' }
     let(:item) do
-      MagazineLuizaRewards::CartItem.new(sku: sku, seller: 'magazineluiza', quantity: 1)
+      MagazineLuizaRewardsV2::CartItem.new(sku: sku, seller: 'magazineluiza', quantity: 1)
     end
 
     context 'when successfull', vcr: { cassette_name: 'carts/add_item_successful' } do
-      it { expect(add_item).to be_a(MagazineLuizaRewards::Cart) }
+      it { expect(add_item).to be_a(MagazineLuizaRewardsV2::Cart) }
       it { expect(add_item.items.map(&:sku)).to include('145855500') }
     end
 
@@ -117,7 +117,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
       let(:sku) { 'invalid' }
 
       it do
-        expect { add_item }.to raise_error(MagazineLuizaRewards::Exceptions::BadRequestError,
+        expect { add_item }.to raise_error(MagazineLuizaRewardsV2::Exceptions::BadRequestError,
                                            'Item Not Found')
       end
     end
@@ -127,7 +127,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
       it do
         expect { add_item }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'The server did not find the requested resource in the request')
       end
     end
@@ -139,12 +139,12 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
     let(:card_id) { '71555ff9-91c3-4264-9095-06a169117cb3' }
     let(:sku) { '200487300' }
     let(:item) do
-      MagazineLuizaRewards::CartItem.new(sku: sku, seller: 'magazineluiza', quantity: 2)
+      MagazineLuizaRewardsV2::CartItem.new(sku: sku, seller: 'magazineluiza', quantity: 2)
     end
     let(:updated_item) { update_item_quantity.items.find { |i| i.sku == sku } }
 
     context 'when successfull', vcr: { cassette_name: 'carts/update_item_quantity_successful' } do
-      it { expect(update_item_quantity).to be_a(MagazineLuizaRewards::Cart) }
+      it { expect(update_item_quantity).to be_a(MagazineLuizaRewardsV2::Cart) }
       it { expect(updated_item.quantity).to eq(2) }
     end
 
@@ -153,7 +153,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
       it do
         expect { update_item_quantity }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'Item Not Found')
       end
     end
@@ -164,7 +164,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
       it do
         expect { update_item_quantity }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'The server did not find the requested resource in the request')
       end
     end
@@ -176,11 +176,11 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
     let(:card_id) { '71555ff9-91c3-4264-9095-06a169117cb3' }
     let(:sku) { '200487300' }
     let(:item) do
-      MagazineLuizaRewards::CartItem.new(sku: sku, seller: 'magazineluiza')
+      MagazineLuizaRewardsV2::CartItem.new(sku: sku, seller: 'magazineluiza')
     end
 
     context 'when successfull', vcr: { cassette_name: 'carts/remove_item_successful' } do
-      it { expect(remove_item).to be_a(MagazineLuizaRewards::Cart) }
+      it { expect(remove_item).to be_a(MagazineLuizaRewardsV2::Cart) }
       it { expect(remove_item.items.map(&:sku)).not_to include('200487300') }
     end
 
@@ -188,7 +188,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
       let(:sku) { 'invalid' }
 
       it do
-        expect { remove_item }.to raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+        expect { remove_item }.to raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                                               'Item Not Found')
       end
     end
@@ -198,7 +198,7 @@ RSpec.describe MagazineLuizaRewards::Api::Carts do
 
       it do
         expect { remove_item }.to \
-          raise_error(MagazineLuizaRewards::Exceptions::NotFoundError,
+          raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError,
                       'The server did not find the requested resource in the request')
       end
     end

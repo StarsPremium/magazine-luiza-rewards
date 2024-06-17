@@ -61,7 +61,7 @@ require_relative 'magazine_luiza_rewards/models/shipping_contact'
 require_relative 'magazine_luiza_rewards/models/payment_info'
 require_relative 'magazine_luiza_rewards/models/order_request'
 
-module MagazineLuizaRewards
+module MagazineLuizaRewardsV2
   def self.root
     File.expand_path '..', __dir__
   end
