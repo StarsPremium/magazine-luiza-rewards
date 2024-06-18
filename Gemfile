@@ -11,6 +11,7 @@ gem 'rspec-dry-struct', '~> 0.1'
 gem 'rubocop', '~> 1.21'
 gem 'rubocop-rake', require: false
 gem 'rubocop-rspec', require: false
+gem 'ruby2_keywords', '~> 0.0.4'
 gem 'vcr', '~> 6.2'
 gem 'webmock', '~> 3.19'
 
