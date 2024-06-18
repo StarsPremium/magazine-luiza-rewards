@@ -45,6 +45,16 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Max: 12
 
+RSpec/SpecFilePathFormat:
+  Enabled: true
+  Exclude:
+    - 'spec/lib/magazine_luiza_rewards_v2/models/*_spec.rb'
+
+RSpec/FilePath:
+  Enabled: true
+  Exclude:
+    - 'spec/lib/magazine_luiza_rewards_v2/models/*_spec.rb'
+
 RSpec/LetSetup:
   Enabled: false
 
