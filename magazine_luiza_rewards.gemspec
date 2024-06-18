@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'Integration with the rewards program of Magazine Luiza'
   spec.homepage = 'https://github.com/StarsPremium/magazine_luiza_rewards'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 2.7.8'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(__dir__) do
     `git ls-files -z`.split("\x0").reject do |f|
       (File.expand_path(f) == __FILE__) ||
-        f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor Gemfile])
+        f.start_with?(*%w[bin/ test/ spec/ features/ .git  Gemfile])
     end
   end
   spec.bindir = 'exe'

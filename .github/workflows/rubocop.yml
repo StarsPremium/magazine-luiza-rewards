@@ -11,12 +11,6 @@ on:
 jobs:
   rubocop:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
-    strategy:
-      matrix:
-        ruby:
-          - '2.7.8'
-          - '3.2.2'
 
     env:
       RAILS_ENV: test
@@ -27,7 +21,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: 2.7.8
           bundler-cache: true
 
       - name: Linter
