@@ -48,7 +48,9 @@ RSpec.describe MagazineLuizaRewardsV2::Api::Products do
       let(:sku) { '999_999' }
       let(:seller) { 'unknown' }
 
-      it { expect { product_info }.to raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError) }
+      it do
+        expect { product_info }.to raise_error(MagazineLuizaRewardsV2::Exceptions::NotFoundError)
+      end
     end
   end
 

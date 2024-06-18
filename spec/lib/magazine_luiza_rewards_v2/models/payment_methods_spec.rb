@@ -8,6 +8,9 @@ RSpec.describe MagazineLuizaRewardsV2::PaymentMethods do
 
     it { is_expected.to have_attribute(:id, Types::Coercible::String) }
     it { is_expected.to have_attribute(:description, Types::Coercible::String) }
-    it { is_expected.to have_attribute(:installment_plans, MagazineLuizaRewardsV2::InstallmentPlans) }
+
+    it do
+      is_expected.to have_attribute(:installment_plans, MagazineLuizaRewardsV2::InstallmentPlans)
+    end
   end
 end

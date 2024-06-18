@@ -11,6 +11,9 @@ RSpec.describe MagazineLuizaRewardsV2::DeliveryModality do
     it { is_expected.to have_attribute(:amount, Types::Coercible::Decimal) }
     it { is_expected.to have_attribute(:type, Types::Coercible::String) }
     it { is_expected.to have_attribute(:providers, Types::Array.of(Types::Coercible::String)) }
-    it { is_expected.to have_attribute(:shipping_time, MagazineLuizaRewardsV2::ShippingTimeResponse) }
+
+    it do
+      is_expected.to have_attribute(:shipping_time, MagazineLuizaRewardsV2::ShippingTimeResponse)
+    end
   end
 end
