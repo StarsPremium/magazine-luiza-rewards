@@ -74,7 +74,8 @@ RSpec.describe MagazineLuizaRewardsV2::Client do
     let(:options) { { show_payment_methods: false } }
     let(:product_price) { instance_double(MagazineLuizaRewardsV2::ProductPrice) }
     let(:api) do
-      instance_double(MagazineLuizaRewardsV2::Api::Products, pricing_and_availability: product_price)
+      instance_double(MagazineLuizaRewardsV2::Api::Products,
+                      pricing_and_availability: product_price)
     end
 
     before do
@@ -136,7 +137,9 @@ RSpec.describe MagazineLuizaRewardsV2::Client do
 
     let(:cart_id) { '123' }
     let(:item) { instance_double(MagazineLuizaRewardsV2::CartItem) }
-    let(:api) { instance_double(MagazineLuizaRewardsV2::Api::Carts, add_item_to_cart: updated_cart) }
+    let(:api) do
+      instance_double(MagazineLuizaRewardsV2::Api::Carts, add_item_to_cart: updated_cart)
+    end
     let(:updated_cart) { instance_double(MagazineLuizaRewardsV2::Cart) }
 
     before do

@@ -9,6 +9,85 @@ AllCops:
 Layout/LineLength:
   Max: 100
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: false
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: false
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: false
+
+Lint/RaiseException:
+  Enabled: false
+
+Lint/StructNewOverride:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "Rakefile"
+    - "**/*_spec.rb"
+    - "spec/**/*.rb"
+
+Metrics/MethodLength:
+  Max: 12
+
+RSpec/SpecFilePathFormat:
+  Enabled: true
+  Exclude:
+    - 'spec/lib/magazine_luiza_rewards_v2/models/*_spec.rb'
+
+RSpec/FilePath:
+  Enabled: true
+  Exclude:
+    - 'spec/lib/magazine_luiza_rewards_v2/models/*_spec.rb'
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/ImplicitSubject:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: true
+  Prefixes:
+    - for
+    - when
+    - with
+    - without
+    - and
+
+RSpec/VerifiedDoubleReference:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes
@@ -17,16 +96,38 @@ Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: single_quotes
 
+Style/ExponentialNotation:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+Style/RedundantFetchBlock:
+  Enabled: false
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: false
+
+Style/RedundantRegexpEscape:
+  Enabled: false
+
+Style/SlicingWithRange:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
-RSpec/FilePath:
-  Exclude:
-    - 'spec/lib/magazine_luiza_rewards/models/*'
-
-RSpec/MultipleMemoizedHelpers:
+Style/OptionalBooleanParameter:
   Enabled: false
 
-RSpec/SpecFilePathFormat:
-  Exclude:
-    - 'spec/lib/magazine_luiza_rewards/models/*'
+Style/MultilineBlockChain:
+  Enabled: false

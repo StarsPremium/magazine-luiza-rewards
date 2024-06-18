@@ -16,8 +16,10 @@ RSpec.describe MagazineLuizaRewardsV2::Cart do
     it { is_expected.to have_attribute(:shipping_address_id, Types::Coercible::String) }
 
     it do
-      expect(cart).to \
-        have_attribute(:deliveries, Types::Array.of(MagazineLuizaRewardsV2::PartialUpdateDeliveries))
+      expect(cart).to have_attribute(
+        :deliveries,
+        Types::Array.of(MagazineLuizaRewardsV2::PartialUpdateDeliveries)
+      )
     end
   end
 end

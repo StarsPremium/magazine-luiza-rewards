@@ -7,7 +7,10 @@ RSpec.describe MagazineLuizaRewardsV2::CalculatedFreight do
     subject(:calculated_freight) { described_class }
 
     it { is_expected.to have_attribute(:disclaimers, Types::Array.of(Types::Coercible::String)) }
-    it { is_expected.to have_attribute(:deliveries, Types::Array.of(MagazineLuizaRewardsV2::Delivery)) }
+
+    it do
+      is_expected.to have_attribute(:deliveries, Types::Array.of(MagazineLuizaRewardsV2::Delivery))
+    end
 
     it do
       expect(calculated_freight).to \
