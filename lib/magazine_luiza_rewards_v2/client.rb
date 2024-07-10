@@ -23,7 +23,7 @@ module MagazineLuizaRewardsV2
 
     def login(username, password)
       api = Api::Authentication.new(self)
-      @oauth_token = nil
+
       token_info = api.generate_token(username, password)
       @oauth_token = token_info.access_token
 

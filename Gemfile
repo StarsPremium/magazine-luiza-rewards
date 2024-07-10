@@ -12,9 +12,13 @@ gem 'rubocop', '~> 1.21'
 gem 'rubocop-rake', require: false
 gem 'rubocop-rspec', require: false
 gem 'ruby2_keywords', '~> 0.0.4'
-gem 'vcr', '~> 6.2'
-gem 'webmock', '~> 3.19'
 
 group :development, :test do
   gem 'debug', '~> 1.9'
+end
+
+group :test do
+  gem 'vcr', '~> 6.2'
+  gem 'webmock', '~> 3.19'
+  gem 'activesupport'
 end
