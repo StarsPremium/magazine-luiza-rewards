@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'active_support/core_ext/object/blank'
 
 RSpec.describe MagazineLuizaRewardsV2::Api::Products do
   subject(:api_products) { described_class.new(client) }

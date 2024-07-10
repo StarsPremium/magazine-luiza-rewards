@@ -3,6 +3,8 @@
 module MagazineLuizaRewardsV2
   module Api
     class Products < Base
+      OUT_OF_STOCK = 'out of stock'
+
       def products(limit = 10, page = 1, filters = {})
         options = filters.merge(_limit: limit, _page: page)
         response = request(:get, '/api/v1/products', options)
@@ -25,7 +27,7 @@ module MagazineLuizaRewardsV2
         return [default_product_price(products_map.first)] if response.blank?
 
         response.map do |product_price|
-          if product_price[:availability] == 'out of stock'
+          if product_price[:availability] == OUT_OF_STOCK
             default_product_price(product_price)
           else
             ProductPrice.new(product_price)
@@ -36,10 +38,10 @@ module MagazineLuizaRewardsV2
       private
 
       def default_product_price(product)
-        ProductPrice.new(product_price_params(product))
+        ProductPrice.new(default_product_price_params(product))
       end
 
-      def product_price_params(product)
+      def default_product_price_params(product)
         {
           sku: product[:sku],
           seller_id: product[:seller_id],

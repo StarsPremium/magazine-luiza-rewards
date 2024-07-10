@@ -2,6 +2,7 @@
 
 require 'magazine_luiza_rewards_v2'
 require 'rspec/dry/struct'
+require 'active_support/all'
 
 support_dir = "#{MagazineLuizaRewardsV2.root}/spec/support/**/*.rb"
 Dir[support_dir].sort.each { |f| require f }

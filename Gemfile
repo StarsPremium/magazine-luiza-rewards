@@ -6,19 +6,19 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rake', '~> 13.0'
-gem 'rspec', '~> 3.0'
-gem 'rspec-dry-struct', '~> 0.1'
-gem 'rubocop', '~> 1.21'
-gem 'rubocop-rake', require: false
-gem 'rubocop-rspec', require: false
 gem 'ruby2_keywords', '~> 0.0.4'
 
 group :development, :test do
+  gem 'activesupport'
   gem 'debug', '~> 1.9'
+  gem 'rubocop', '~> 1.21'
+  gem 'rubocop-rake'
+  gem 'rubocop-rspec'
 end
 
 group :test do
-  gem 'activesupport'
+  gem 'rspec', '~> 3.0'
+  gem 'rspec-dry-struct', '~> 0.1'
   gem 'vcr', '~> 6.2'
   gem 'webmock', '~> 3.19'
 end
