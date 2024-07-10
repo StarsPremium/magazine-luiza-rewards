@@ -25,8 +25,11 @@ module MagazineLuizaRewardsV2
         return [default_product_price(products_map.first)] if response.blank?
 
         response.map do |product_price|
-          product_price[:availability] == 'out of stock' ? default_product_price(product_price) :
-                                                           ProductPrice.new(product_price)
+          if product_price[:availability] == 'out of stock'
+            default_product_price(product_price)
+          else
+            ProductPrice.new(product_price)
+          end
         end
       end
 
