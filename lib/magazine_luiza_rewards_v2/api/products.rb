@@ -3,22 +3,54 @@
 module MagazineLuizaRewardsV2
   module Api
     class Products < Base
+      OUT_OF_STOCK = 'out of stock'
+
       def products(limit = 10, page = 1, filters = {})
         options = filters.merge(_limit: limit, _page: page)
         response = request(:get, '/api/v1/products', options)
+
         response.map { |product| Product.new(product) }
       end
 
       def product_info(sku, seller)
         response = request(:get, "/api/v1/products/sku/#{sku}/seller/#{seller}")
+
         Product.new(response)
       end
 
       def pricing_and_availability(products = [], show_payment_methods: false)
         products_map = products.map { |product| product.to_h.slice(:sku, :seller_id) }
+
         options = { products: products_map, show_payment_methods: show_payment_methods }
         response = request(:post, '/api/v1/products/pricing_and_availability', options)
-        response.map { |product_price| ProductPrice.new(product_price) }
+
+        return [default_product_price(products_map.first)] if response.blank?
+
+        response.map do |product_price|
+          if product_price[:availability] == OUT_OF_STOCK
+            default_product_price(product_price)
+          else
+            ProductPrice.new(product_price)
+          end
+        end
+      end
+
+      private
+
+      def default_product_price(product)
+        ProductPrice.new(default_product_price_params(product))
+      end
+
+      def default_product_price_params(product)
+        {
+          sku: product[:sku],
+          seller_id: product[:seller_id],
+          availability: product.fetch(:availability, ''),
+          price: 0.0,
+          list_price: 0.0,
+          best_price: {},
+          payment_methods: {}
+        }
       end
     end
   end

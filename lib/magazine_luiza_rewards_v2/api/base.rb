@@ -21,6 +21,7 @@ module MagazineLuizaRewardsV2
 
         begin
           response = faraday.public_send(method, path, options)
+
           response.body
         rescue Faraday::TimeoutError => e
           retry_count += 1

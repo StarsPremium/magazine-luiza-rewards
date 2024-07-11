@@ -84,12 +84,25 @@ RSpec.describe MagazineLuizaRewardsV2::Api::Products do
       it { expect(pricing_and_availability).to all(be_a(MagazineLuizaRewardsV2::ProductPrice)) }
     end
 
-    context 'when product does not exist',
+    context 'when product does not exist and default object is returned',
             vcr: { cassette_name: 'products/price_not_found_request' } do
       let(:product) { MagazineLuizaRewardsV2::Product.new(sku: '999_999', seller_id: 'unknown') }
+      let(:expected_response) do
+        MagazineLuizaRewardsV2::ProductPrice.new(
+          {
+            sku: product.sku,
+            seller_id: product.seller_id,
+            availability: '',
+            price: 0.0,
+            list_price: 0.0,
+            best_price: {},
+            payment_methods: {}
+          }
+        )
+      end
 
       it { expect(pricing_and_availability).to be_a(Array) }
-      it { expect(pricing_and_availability.size).to eq(0) }
+      it { expect(pricing_and_availability.first).to eq(expected_response) }
     end
   end
 end
